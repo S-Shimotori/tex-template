@@ -1,6 +1,14 @@
 \documentclass[11pt,a4paper,titlepage]{jarticle}
 \usepackage[utf8]{inputenc}
 \usepackage{pxfonts}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\Break}{\State \textbf{break}}
+\algblockdefx[Loop]{Loop}{EndLoop}[1][]{\textbf{Loop} #1}{\textbf{End Loop}}
+
 \begin{document}
 
 \title{タイトル}
@@ -13,7 +21,26 @@
 \pagenumbering{arabic}
 
 \section{せくしょん}
-Hello
+
+\begin{algorithm}{}
+\caption{Temp}
+\begin{algorithmic}[1]
+\Require Integers $a >0$ and $b$
+\Ensure $a\cdot b$
+\State $i\leftarrow0$
+\State $c \leftarrow 0$
+\Loop{1}
+    \If{$i=a$}
+        \Break Loop 1
+    \EndIf
+    \State $c \leftarrow c + b$
+    \State $i \leftarrow i + 1$
+\EndLoop
+\State \textbf{return} $c$
+\end{algorithmic}
+\end{algorithm}
+
+
 \subsection{さぶせくしょん}
 ,
 \subsubsection{さぶさぶせくしょん}
